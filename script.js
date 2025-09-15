@@ -5,7 +5,13 @@ const checkpointScreen = document.querySelector(".checkpoint-screen");
 const checkpointMessage = document.querySelector(".checkpoint-screen > p");
 const ctx = canvas.getContext("2d");
 
+<canvas id="gameCanvas"></canvas>
+
+<script>
   const canvas = document.getElementById("gameCanvas");
   const ctx = canvas.getContext("2d");
 
-  console.log(canvas.width)
+  canvas.width = innerWidth;
+  console.log(canvas.width);
+</script>
+

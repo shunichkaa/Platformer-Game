@@ -34,6 +34,7 @@ class Player {
 
 update(ctx) {
   this.draw(ctx);
+  this.position.x += this.velocity.x;
 }
 
 

@@ -28,10 +28,10 @@ class Player {
   }
   
 
-
-  draw(ctx) {
-    ctx.fillStyle = "#99c9ff";
-  }
+draw(ctx) {
+  ctx.fillStyle = "#99c9ff";
+  ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+}
 
 
 }

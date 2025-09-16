@@ -27,8 +27,10 @@ class Player {
     this.height = proportionalSize(40);
   }
   
-  draw() {
-    
+
+
+  draw(ctx) {
+    ctx.fillStyle = "#99c9ff";
   }
 
 

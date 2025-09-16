@@ -32,9 +32,9 @@ class Player {
   }
   
 
-  update() {
-    
-  }
+update(ctx) {
+  this.draw(ctx);
+}
 
 
 }

@@ -32,10 +32,12 @@ class Player {
   }
   
 
-update(ctx) {
-  this.draw(ctx);
-  this.position.x += this.velocity.x;
+update() {
+  this.draw();
+  this.position.x += this.velocity.x; 
+  this.position.y += this.velocity.y;
 }
+
 
 
 }

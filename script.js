@@ -59,7 +59,7 @@ class Player {
 const player = new Player();
 
 const animate = () => {
-
+  requestAnimationFrame(animate)
 }
 
 const startGame = () => {

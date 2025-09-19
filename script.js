@@ -64,7 +64,15 @@ const animate = () => {
   player.update();
 }
 
-const keys = {};
+
+const keys = {
+  rightKey: {
+    pressed: false
+  },
+  leftKey: {
+    pressed: false
+  }
+};
 
 
 const startGame = () => {

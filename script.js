@@ -98,6 +98,12 @@ switch (key) {
     }
     player.velocity.x -= xVelocity;
     break;
+
+  case "ArrowUp":
+  case " ":
+  case "Spacebar":
+    player.velocity.y -= 8;
+    break;
 }
 }
 

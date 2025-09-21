@@ -56,8 +56,22 @@ class Player {
   }
 }
 
-const player = new Player();
+class Platform {
+  constructor(x, y, width, height, color = "brown") {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.color = color;
+  }
 
+  draw(ctx) {
+    ctx.fillStyle = this.color;
+    ctx.fillRect(this.x, this.y, this.width, this.height);
+  }
+}
+
+const player = new Player();
 
 const animate = () => {
   requestAnimationFrame(animate);
@@ -112,17 +126,11 @@ const movePlayer = (key, xVelocity, isPressed) => {
   }
 }
 
-
 const startGame = () => {
   canvas.style.display = "block";
   startScreen.style.display = "none";
-
-
   animate();
-
-
 }
-
 
 startBtn.addEventListener("click", startGame);
 
@@ -133,4 +141,3 @@ window.addEventListener("keydown", ({ key }) => {
 window.addEventListener("keyup", ({ key }) => {
   movePlayer(key, 0, false);
 });
-

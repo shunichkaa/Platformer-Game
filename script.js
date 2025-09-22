@@ -96,14 +96,9 @@ const animate = () => {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-function animate() {
-  requestAnimationFrame(animate);
-
-  platforms.forEach(platform => {
+  platforms.forEach((platform) => {
     platform.draw();
   });
-}
-
 
   player.update();
 
@@ -113,6 +108,12 @@ function animate() {
     player.velocity.x = -5;
   } else {
     player.velocity.x = 0;
+
+
+    if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
+
+    }
+
   }
 }
 

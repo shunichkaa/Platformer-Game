@@ -30,7 +30,7 @@ class Player {
     ctx.fillStyle = "#99c9ff";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
-
+  
   update() {
     this.draw();
     this.position.x += this.velocity.x;
@@ -109,19 +109,20 @@ const animate = () => {
   } else {
     player.velocity.x = 0;
 
-
-if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
-  platforms.forEach(platform => {
-    platform.position.x -= 5;
-  });
-} else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
-  platforms.forEach(platform => {
-    platform.position.x += 5;
-  });
-}
-
-
+    if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
+      platforms.forEach((platform) => {
+        platform.position.x -= 5;
+      });
+    } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
+      platforms.forEach((platform) => {
+        platform.position.x += 5;
+      });
+    }
   }
+
+platforms.forEach(platform => {
+});
+
 }
 
 

@@ -195,8 +195,10 @@ const animate = () => {
   });
 
 checkpoints.forEach((checkpoint, index, checkpoints) => {
+  const checkpointDetectionRules = [
+    player.position.x >= checkpoint.position.x
+  ];
 });
-
 }
 
 

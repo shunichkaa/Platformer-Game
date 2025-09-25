@@ -30,7 +30,7 @@ class Player {
     ctx.fillStyle = "#99c9ff";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
-  
+
   update() {
     this.draw();
     this.position.x += this.velocity.x;
@@ -157,18 +157,15 @@ const animate = () => {
       checkpoints.forEach((checkpoint) => {
         checkpoint.position.x -= 5;
       });
-    
 
-} else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
-  platforms.forEach((platform) => {
-    platform.position.x += 5;
-  });
+    } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
+      platforms.forEach((platform) => {
+        platform.position.x += 5;
+      });
 
-  checkpoints.forEach((checkpoint) => {
-    checkpoint.position.x += 5;
-  });
-}
-
+      checkpoints.forEach((checkpoint) => {
+        checkpoint.position.x += 5;
+      });
     }
   }
 
@@ -245,6 +242,12 @@ const startGame = () => {
   startScreen.style.display = "none";
   animate();
 }
+
+const showCheckpointScreen = (msg) => {
+  checkpointMessage.textContent = msg
+  checkpointScreen.style.display = "block"
+}
+
 
 startBtn.addEventListener("click", startGame);
 
